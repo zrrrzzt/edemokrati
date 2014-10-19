@@ -24,7 +24,7 @@ var edm = require('edemokrati')
       'host': 'https://www.porsgrunn.kommune.no',
       'fraDato': '\/Date(1413410400000)\/',
       'tilDato': '\/Date(1413410400000)\/',
-      'søkestreng': 'Kragerø'
+      'søkestreng': ''
     }
   ;
 
@@ -37,6 +37,41 @@ edm.getPostlisteArkivdeler(opts, function(err, data){
 });
 ```
 
+###getPostlisteDokumenttyper
+
+Returns a list of different document types.
+ 
+Pass an options object with the params.
+
+**host**: The url of the host **(required)**
+
+**fraDato**: Search from date. Timestampformatted like '\/Date(1413410400000)\/' **(required)**
+
+**tilDato**: Search to date. Timestampformatted like '\/Date(1413410400000)\/' **(required)**
+
+**arkivdel**: Archive unit. "_" means all other alternatives is listed through the getPostlisteArkivdeler method **(required)**
+
+**søkestreng**: Search string. **(optional)**
+
+```
+var edm = require('edemokrati')
+  , opts = {
+      'host': 'https://www.porsgrunn.kommune.no',
+      'fraDato': '\/Date(1413410400000)\/',
+      'tilDato': '\/Date(1413410400000)\/',
+      'arkivdel': '_',
+      'søkestreng': ''
+    }
+  ;
+
+edm.getPostlisteDokumenttyper(opts, function(err, data){
+  if(err){
+    console.error(err);
+  } else {
+    console.log(data);
+  }
+});
+```
 
 ###getPostlisteSok
 
