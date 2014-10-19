@@ -75,7 +75,7 @@ edm.getPostlisteDokumenttyper(opts, function(err, data){
 
 ###getPostlisteSok
 
-Search a list of journals from a given period.
+Returns a list of journals.
  
 Pass an options object with the params.
 
@@ -104,6 +104,33 @@ var edm = require('edemokrati')
   ;
 
 edm.getPostlisteSok(opts, function(err, data){
+  if(err){
+    console.error(err);
+  } else {
+    console.log(data);
+  }
+});
+```
+
+###getPostlisteObjekt
+
+Returns one specific journal.
+ 
+Pass an options object with the params.
+
+**host**: The url of the host **(required)**
+
+**id**: The id for the journal you want to see **(required)**
+
+```
+var edm = require('edemokrati')
+  , opts = {
+      'host': 'https://www.porsgrunn.kommune.no',
+      'id': '267478'
+    }
+  ;
+
+edm.getPostlisteObjekt(opts, function(err, data){
   if(err){
     console.error(err);
   } else {

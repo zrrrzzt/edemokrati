@@ -1,14 +1,14 @@
 'use strict';
 
 var assert = require('assert')
-  , getPostlisteArkivdeler = require('../index').getPostlisteArkivdeler;
+  , getPostlisteObjekt = require('../index').getPostlisteObjekt;
 ;
 
-describe('edemokrati - getPostlisteArkivdeler', function(){
+describe('edemokrati - getPostlisteObjekt', function(){
 
   it('Requires an opts object', function(done){
 
-    getPostlisteArkivdeler(function(err, data){
+    getPostlisteObjekt(function(err, data){
       assert.throws(function(){
           if(err) throw err;
         }, function(err){
@@ -30,7 +30,7 @@ describe('edemokrati - getPostlisteArkivdeler', function(){
       }
       ;
 
-    getPostlisteArkivdeler(opts, function(err, data){
+    getPostlisteObjekt(opts, function(err, data){
       assert.throws(function(){
           if(err) throw err;
         }, function(err){
@@ -45,43 +45,19 @@ describe('edemokrati - getPostlisteArkivdeler', function(){
 
   });
 
-  it('Requires fraDato is set', function(done){
+  it('Requires id is set', function(done){
 
     var opts = {
         host: true,
-        fraDato: false
+        id: false
       }
       ;
 
-    getPostlisteArkivdeler(opts, function(err, data){
+    getPostlisteObjekt(opts, function(err, data){
       assert.throws(function(){
           if(err) throw err;
         }, function(err){
-          if((err instanceof Error) && /Missing required param: fraDato/.test(err)){
-            return true
-          }
-        },
-        "Unexpected error"
-      );
-      done();
-    });
-
-  });
-
-  it('Requires tilDato is set', function(done){
-
-    var opts = {
-        host: true,
-        fraDato: true,
-        tilDato: false
-      }
-      ;
-
-    getPostlisteArkivdeler(opts, function(err, data){
-      assert.throws(function(){
-          if(err) throw err;
-        }, function(err){
-          if((err instanceof Error) && /Missing required param: tilDato/.test(err)){
+          if((err instanceof Error) && /Missing required param: id/.test(err)){
             return true
           }
         },

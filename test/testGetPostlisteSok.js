@@ -1,7 +1,5 @@
 'use strict';
 
-'use strict';
-
 var assert = require('assert')
   , getPostlisteSok = require('../index').getPostlisteSok;
   ;
