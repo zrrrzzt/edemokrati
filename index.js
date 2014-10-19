@@ -4,7 +4,7 @@ var request = require('request')
   , endpoint = '/Templates/eDemokrati/Services/eDemokratiService.svc/'
   ;
 
-function getPostlister(opts, callback){
+function getPostlisteSok(opts, callback){
 
   var reqOpts
     ;
@@ -53,4 +53,4 @@ function getPostlister(opts, callback){
   })
 }
 
-module.exports.getPostlister = getPostlister;
+module.exports.getPostlisteSok = getPostlisteSok;

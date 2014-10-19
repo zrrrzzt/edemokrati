@@ -3,14 +3,14 @@
 'use strict';
 
 var assert = require('assert')
-  , getPostlister = require('../index').getPostlister;
+  , getPostlisteSok = require('../index').getPostlisteSok;
   ;
 
-describe('edemokrati - getPostlister', function(){
+describe('edemokrati - getPostlisteSok', function(){
 
   it('Requires an opts object', function(done){
 
-    getPostlister(function(err, data){
+    getPostlisteSok(function(err, data){
       assert.throws(function(){
           if(err) throw err;
         }, function(err){
@@ -32,7 +32,7 @@ describe('edemokrati - getPostlister', function(){
       }
       ;
 
-    getPostlister(opts, function(err, data){
+    getPostlisteSok(opts, function(err, data){
       assert.throws(function(){
           if(err) throw err;
         }, function(err){
@@ -55,7 +55,7 @@ describe('edemokrati - getPostlister', function(){
       }
       ;
 
-    getPostlister(opts, function(err, data){
+    getPostlisteSok(opts, function(err, data){
       assert.throws(function(){
           if(err) throw err;
         }, function(err){
@@ -79,7 +79,7 @@ describe('edemokrati - getPostlister', function(){
       }
       ;
 
-    getPostlister(opts, function(err, data){
+    getPostlisteSok(opts, function(err, data){
       assert.throws(function(){
           if(err) throw err;
         }, function(err){
@@ -104,7 +104,7 @@ describe('edemokrati - getPostlister', function(){
       }
       ;
 
-    getPostlister(opts, function(err, data){
+    getPostlisteSok(opts, function(err, data){
       assert.throws(function(){
           if(err) throw err;
         }, function(err){
@@ -131,7 +131,7 @@ describe('edemokrati - getPostlister', function(){
       }
       ;
 
-    getPostlister(opts, function(err, data){
+    getPostlisteSok(opts, function(err, data){
       assert.throws(function(){
           if(err) throw err;
         }, function(err){

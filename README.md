@@ -4,9 +4,9 @@ Node.js module for eDemokrati
 
 ##Methods
 
-###getPostlister
+###getPostlisteSok
 
-Get a list of journals from a given period.
+Search a list of journals from a given period.
  
 Pass an options object with the params.
 
@@ -34,7 +34,7 @@ var edm = require('edemokrati')
     }
   ;
 
-edm.getPostlister(opts, function(err, data){
+edm.getPostlisteSok(opts, function(err, data){
   if(err){
     console.error(err);
   } else {
