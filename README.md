@@ -1,6 +1,7 @@
-#edemokrati
+#edemokrati [![Build Status](https://travis-ci.org/zrrrzzt/edemokrati.svg?branch=master)](https://travis-ci.org/zrrrzzt/edemokrati)
 
-Node.js module for the eDemokrati solution from Sem & Stenersen Prokom.
+Node.js module for the eDemokrati solution from [Sem & Stenersen Prokom](http://www.prokom.no/).
+This first release targets the public journal part of [Lokaldemokrati24:7](http://www.prokom.no/Produkter/Portal/Lokaldemokrati247/).
 
 ##Installation
 
