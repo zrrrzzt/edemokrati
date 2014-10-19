@@ -1,6 +1,12 @@
 #edemokrati
 
-Node.js module for eDemokrati
+Node.js module for the eDemokrati solution from Sem & Stenersen Prokom.
+
+##Installation
+
+```
+$ npm install edemokrati
+```
 
 ##Methods
 
@@ -138,3 +144,34 @@ edm.getPostlisteObjekt(opts, function(err, data){
   }
 });
 ```
+
+###getDokumenter
+
+Returns the attached document for a specific journal.
+ 
+Pass an options object with the params.
+
+**host**: The url of the host **(required)**
+
+**journalpostid**: The id for the journal **(required)**
+
+```
+var edm = require('edemokrati')
+  , opts = {
+      'host': 'https://www.porsgrunn.kommune.no',
+      'journalpostid': '267478'
+    }
+  ;
+
+edm.getDokumenter(opts, function(err, data){
+  if(err){
+    console.error(err);
+  } else {
+    console.log(data);
+  }
+});
+```
+
+##Disclaimer
+
+This is not an official API for eDemokrati. I'm not affiliated with Sem & Stenersen Prokom.

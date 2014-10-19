@@ -183,6 +183,43 @@ function getPostlisteObjekt(opts, callback){
   })
 }
 
+function getDokumenter(opts, callback){
+
+  var reqOpts
+    ;
+
+  //If opts is a function we assume it's the callback
+  if(typeof opts === 'function'){
+    callback = opts;
+  }
+
+  if(typeof opts !== 'object'){
+    return callback(new Error('Missing required opts object'), null);
+  }
+
+  if(!opts.host){
+    return callback(new Error('Missing required param: host'), null);
+  }
+
+  if(!opts.journalpostid){
+    return callback(new Error('Missing required param: journalpostid'), null);
+  }
+
+  reqOpts = {
+    uri: opts.host + endpoint + '/GetDokumenter',
+    method: 'POST',
+    json:opts
+  };
+
+  request(reqOpts, function(error, response, body){
+    if(error){
+      return callback(error, null);
+    } else {
+      return callback(null, body.d);
+    }
+  })
+}
+
 module.exports.getPostlisteSok = getPostlisteSok;
 
 module.exports.getPostlisteArkivdeler = getPostlisteArkivdeler;
@@ -190,3 +227,5 @@ module.exports.getPostlisteArkivdeler = getPostlisteArkivdeler;
 module.exports.getPostlisteDokumenttyper = getPostlisteDokumenttyper;
 
 module.exports.getPostlisteObjekt = getPostlisteObjekt;
+
+module.exports.getDokumenter = getDokumenter;
