@@ -1,14 +1,5 @@
-'use strict';
+'use strict'
 
-var postlister = require('./lib/postlister')
-  ;
+var journals = require('./lib/journals')
 
-module.exports.getPostlisteSok = postlister.getPostlisteSok;
-
-module.exports.getPostlisteArkivdeler = postlister.getPostlisteArkivdeler;
-
-module.exports.getPostlisteDokumenttyper = postlister.getPostlisteDokumenttyper;
-
-module.exports.getPostlisteObjekt = postlister.getPostlisteObjekt;
-
-module.exports.getDokumenter = postlister.getDokumenter;
+module.exports.journals = journals
