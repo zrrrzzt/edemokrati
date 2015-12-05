@@ -1,17 +1,18 @@
-#edemokrati [![Build Status](https://travis-ci.org/zrrrzzt/edemokrati.svg?branch=master)](https://travis-ci.org/zrrrzzt/edemokrati)
+[![Build Status](https://travis-ci.org/zrrrzzt/edemokrati.svg?branch=master)](https://travis-ci.org/zrrrzzt/edemokrati)
+# edemokrati 
 
 Node.js module for the eDemokrati solution from [Sem & Stenersen Prokom](http://www.prokom.no/).
 This first release targets the public journal part of [Lokaldemokrati24:7](http://www.prokom.no/Produkter/Portal/Lokaldemokrati247/).
 
-##Installation
+## Installation
 
 ```
 $ npm install edemokrati
 ```
 
-##Methods
+## Methods
 
-###getPostlisteArkivdeler
+### getPostlisteArkivdeler
 
 Returns a list of different archive units.
  
@@ -44,7 +45,7 @@ edm.getPostlisteArkivdeler(opts, function(err, data){
 });
 ```
 
-###getPostlisteDokumenttyper
+### getPostlisteDokumenttyper
 
 Returns a list of different document types.
  
@@ -60,12 +61,12 @@ Pass an options object with the params.
 
 **søkestreng**: Search string. **(optional)**
 
-```
+```javascript
 var edm = require('edemokrati')
   , opts = {
       'host': 'https://www.porsgrunn.kommune.no',
-      'fraDato': '\/Date(1413410400000)\/',
-      'tilDato': '\/Date(1413410400000)\/',
+      'fraDato': '\/Date(1449097200000)\/',
+      'tilDato': '\/Date(1449097200000)\/',
       'arkivdel': '_',
       'søkestreng': ''
     }
@@ -80,7 +81,7 @@ edm.getPostlisteDokumenttyper(opts, function(err, data){
 });
 ```
 
-###getPostlisteSok
+### getPostlisteSok
 
 Returns a list of journals.
  
@@ -98,7 +99,7 @@ Pass an options object with the params.
 
 **søkestreng**: Search string. **(optional)**
 
-```
+```javascript
 var edm = require('edemokrati')
   , opts = {
       'host': 'https://www.porsgrunn.kommune.no',
@@ -119,7 +120,7 @@ edm.getPostlisteSok(opts, function(err, data){
 });
 ```
 
-###getPostlisteObjekt
+### getPostlisteObjekt
 
 Returns one specific journal.
  
@@ -129,7 +130,7 @@ Pass an options object with the params.
 
 **id**: The id for the journal you want to see **(required)**
 
-```
+```javascript
 var edm = require('edemokrati')
   , opts = {
       'host': 'https://www.porsgrunn.kommune.no',
@@ -146,7 +147,7 @@ edm.getPostlisteObjekt(opts, function(err, data){
 });
 ```
 
-###getDokumenter
+### getDokumenter
 
 Returns the attached document for a specific journal.
  
@@ -156,7 +157,7 @@ Pass an options object with the params.
 
 **journalpostid**: The id for the journal **(required)**
 
-```
+```javascript
 var edm = require('edemokrati')
   , opts = {
       'host': 'https://www.porsgrunn.kommune.no',
@@ -173,6 +174,6 @@ edm.getDokumenter(opts, function(err, data){
 });
 ```
 
-##Disclaimer
+## Disclaimer
 
 This is not an official API for eDemokrati. I'm not affiliated with Sem & Stenersen Prokom.
