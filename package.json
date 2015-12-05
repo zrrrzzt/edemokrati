@@ -28,7 +28,9 @@
     "url": "http://github.com/zrrrzzt/edemokrati/issues"
   },
   "devDependencies": {
-    "mocha": "^1.21.5"
+    "coveralls": "^2.11.4",
+    "standard": "^5.4.1",
+    "tap": "^2.3.1"
   },
   "dependencies": {
     "request": "^2.67.0"
