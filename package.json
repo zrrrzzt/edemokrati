@@ -28,6 +28,7 @@
     "url": "http://github.com/zrrrzzt/edemokrati/issues"
   },
   "dependencies": {
+    "http-https": "^1.0.0",
     "request": "^2.45.0"
   },
   "devDependencies": {
