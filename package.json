@@ -1,6 +1,6 @@
 {
   "name": "edemokrati",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Connect to eDemokrati",
   "license": "MIT",
   "author": {
@@ -10,13 +10,14 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.8.4"
   },
   "scripts": {
     "test": "standard && tap --reporter=spec test/*.js",
     "coverage": "tap test/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
-    "setup": "npm install && node setup.js"
+    "setup": "npm install",
+    "standard-fix": "standard --fix"
   },
   "keywords": [
     "edemokrati",
@@ -30,12 +31,13 @@
   "bugs": {
     "url": "http://github.com/zrrrzzt/edemokrati/issues"
   },
+  "homepage": "http://github.com/zrrrzzt/edemokrati",
   "devDependencies": {
-    "coveralls": "^2.11.4",
-    "standard": "^10.0.1",
-    "tap": "^10.1.0"
+    "coveralls": "2.13.1",
+    "standard": "10.0.3",
+    "tap": "10.7.2"
   },
   "dependencies": {
-    "request": "^2.67.0"
+    "request": "2.82.0"
   }
 }

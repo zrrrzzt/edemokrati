@@ -1,9 +1,12 @@
 [![Build Status](https://travis-ci.org/zrrrzzt/edemokrati.svg?branch=master)](https://travis-ci.org/zrrrzzt/edemokrati)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
 # edemokrati 
 
 Node.js module for the eDemokrati solution from [Sem & Stenersen Prokom](http://www.prokom.no/).
 This first release targets the public journal part of [Lokaldemokrati24:7](http://www.prokom.no/Produkter/Portal/Lokaldemokrati247/).
+
+This module will only work with their old solution.
 
 ## Installation
 
@@ -37,8 +40,8 @@ Pass an options object with the params.
 ```javascript
 var edm = require('edemokrati')
 var options = {
-  'host': 'https://www.porsgrunn.kommune.no',
-  'journalpostid': '455040'
+  'host': 'https://www.notodden.kommune.no',
+  'journalpostid': '681504'
 }
 
 edm.journals.getDokumenter(options, function (error, data) {
@@ -67,7 +70,7 @@ Pass an options object with the params.
 ```javascript
 var edm = require('edemokrati')
 var options = {
-  'host': 'https://www.porsgrunn.kommune.no',
+  'host': 'https://www.notodden.kommune.no',
   'fraDato': '\/Date(1449097200000)\/',
   'tilDato': '\/Date(1449097200000)\/',
   'søkestreng': ''
@@ -101,7 +104,7 @@ Pass an options object with the params.
 ```javascript
 var edm = require('edemokrati')
 var options = {
-  'host': 'https://www.porsgrunn.kommune.no',
+  'host': 'https://www.notodden.kommune.no',
   'fraDato': '\/Date(1449097200000)\/',
   'tilDato': '\/Date(1449097200000)\/',
   'arkivdel': '_',
@@ -138,7 +141,7 @@ Pass an options object with the params.
 ```javascript
 var edm = require('edemokrati')
 var options = {
-  'host': 'https://www.porsgrunn.kommune.no',
+  'host': 'https://www.notodden.kommune.no',
   'fraDato': '\/Date(1449097200000)\/',
   'tilDato': '\/Date(1449097200000)\/',
   'søkestreng': 'bolig',
@@ -168,8 +171,8 @@ Pass an options object with the params.
 ```javascript
 var edm = require('edemokrati')
 var options = {
-  'host': 'https://www.porsgrunn.kommune.no',
-  'id': '267478'
+  'host': 'https://www.notodden.kommune.no',
+  'id': '17016007'
 }
 
 edm.journals.getPostlisteObjekt(options, function (error, data) {
