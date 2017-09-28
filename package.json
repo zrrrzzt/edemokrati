@@ -33,7 +33,7 @@
   },
   "homepage": "http://github.com/zrrrzzt/edemokrati",
   "devDependencies": {
-    "coveralls": "2.13.1",
+    "coveralls": "2.13.2",
     "standard": "10.0.3",
     "tap": "10.7.2"
   },
