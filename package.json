@@ -38,6 +38,6 @@
     "tap": "11.1.2"
   },
   "dependencies": {
-    "request": "2.83.0"
+    "request": "2.85.0"
   }
 }
