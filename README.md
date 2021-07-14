@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/zrrrzzt/edemokrati.svg?branch=master)](https://travis-ci.org/zrrrzzt/edemokrati)
+[![Build Status](https://travis-ci.com/zrrrzzt/edemokrati.svg?branch=main)](https://travis-ci.com/zrrrzzt/edemokrati)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 # edemokrati 
