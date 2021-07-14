@@ -3,6 +3,10 @@
 
 # edemokrati 
 
+This is no longer maintained. To be honest I don't think the original solution eDemokrati exists anymore either.
+
+You will find some of the functionality from this module in [folkevalgt-api](https://github.com/Alheimsins/folkevalgt-api)
+
 Node.js module for the eDemokrati solution from [Sem & Stenersen Prokom](http://www.prokom.no/).
 This first release targets the public journal part of [Lokaldemokrati24:7](http://www.prokom.no/Produkter/Portal/Lokaldemokrati247/).
 
