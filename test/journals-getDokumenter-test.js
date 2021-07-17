@@ -8,7 +8,7 @@ tap.test('Requires options to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options object'
   getDokumenter(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
 
@@ -19,7 +19,7 @@ tap.test('Requires options.host to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options.host'
   getDokumenter(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
 
@@ -31,6 +31,6 @@ tap.test('Requires options.journalpostid to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options.journalpostid'
   getDokumenter(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
