@@ -8,7 +8,7 @@ tap.test('Requires options to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options object'
   getPostlisteSok(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
 
@@ -19,7 +19,7 @@ tap.test('Requires options.host to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options.host'
   getPostlisteSok(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
 
@@ -31,7 +31,7 @@ tap.test('Requires options.fraDato to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options.fraDato'
   getPostlisteSok(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
 
@@ -44,7 +44,7 @@ tap.test('Requires options.tilDato to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options.tilDato'
   getPostlisteSok(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
 
@@ -58,7 +58,7 @@ tap.test('Requires options.arkivdel to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options.arkivdel'
   getPostlisteSok(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
 
@@ -73,6 +73,6 @@ tap.test('Requires options.dokumenttype to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options.dokumenttype'
   getPostlisteSok(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
