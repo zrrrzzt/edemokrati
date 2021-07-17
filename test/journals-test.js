@@ -1,7 +1,7 @@
 'use strict'
 
-var tap = require('tap')
-var journals = require('../lib/journals')
+const tap = require('tap')
+const journals = require('../lib/journals')
 
 tap.ok(journals.getDokumenter, 'getDokumenter - OK')
 

@@ -1,11 +1,11 @@
 'use strict'
 
-var tap = require('tap')
-var getDokumenter = require('../lib/journals/getDokumenter')
+const tap = require('tap')
+const getDokumenter = require('../lib/journals/getDokumenter')
 
 tap.test('Requires options to be specified', function (test) {
-  var options = false
-  var expectedErrorMessage = 'Missing required input: options object'
+  const options = false
+  const expectedErrorMessage = 'Missing required input: options object'
   getDokumenter(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
@@ -13,10 +13,10 @@ tap.test('Requires options to be specified', function (test) {
 })
 
 tap.test('Requires options.host to be specified', function (test) {
-  var options = {
+  const options = {
     host: false
   }
-  var expectedErrorMessage = 'Missing required input: options.host'
+  const expectedErrorMessage = 'Missing required input: options.host'
   getDokumenter(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
@@ -24,11 +24,11 @@ tap.test('Requires options.host to be specified', function (test) {
 })
 
 tap.test('Requires options.journalpostid to be specified', function (test) {
-  var options = {
+  const options = {
     host: true,
     journalpostid: false
   }
-  var expectedErrorMessage = 'Missing required input: options.journalpostid'
+  const expectedErrorMessage = 'Missing required input: options.journalpostid'
   getDokumenter(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
