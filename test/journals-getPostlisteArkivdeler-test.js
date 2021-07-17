@@ -8,7 +8,7 @@ tap.test('Requires options to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options object'
   getPostlisteArkivdeler(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
 
@@ -19,7 +19,7 @@ tap.test('Requires options.host to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options.host'
   getPostlisteArkivdeler(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
 
@@ -31,7 +31,7 @@ tap.test('Requires options.fraDato to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options.fraDato'
   getPostlisteArkivdeler(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
 
@@ -44,6 +44,6 @@ tap.test('Requires options.tilDato to be specified', function (test) {
   const expectedErrorMessage = 'Missing required input: options.tilDato'
   getPostlisteArkivdeler(options, function (error, data) {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
+    test.end()
   })
 })
